@@ -2,23 +2,35 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
 
-    public static final int SIZE = 12;
-    public static final int STACK_EMPTY = -1;
-    public static final int STACK_ELEMENTS = SIZE - 1;
+    private static final int SIZE = 12;
+    private static final int STACK_EMPTY = -1;
+    private static final int STACK_ELEMENTS = SIZE - 1;
     private final int[] numbers = new int[SIZE];
 
-    public int total = STACK_EMPTY;
+    private int total = STACK_EMPTY;
+    
+    public static int getSize() {
+        return SIZE;
+    }
+
+    public static int getStackEmpty() {
+        return STACK_EMPTY;
+    }
+
+    public int getTotal() {
+        return total;
+    }
 
     public void countIn(int in) {
         if (!isFull())
             numbers[++total] = in;
     }
 
-    public boolean callCheck() {
+    protected boolean callCheck() {
         return total == STACK_EMPTY;
     }
 
-    public boolean isFull() {
+    protected boolean isFull() {
         return total == STACK_ELEMENTS;
     }
 
