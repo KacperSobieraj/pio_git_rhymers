@@ -8,10 +8,7 @@ public class DefaultCountingOutRhymer {
     private final int[] numbers = new int[SIZE];
 
     private int total = STACK_EMPTY;
-
-    public void setTotal(int total) {
-        this.total = total;
-    }
+    
     public static int getSize() {
         return SIZE;
     }
