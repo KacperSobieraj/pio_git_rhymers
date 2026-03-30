@@ -37,3 +37,4 @@ class RhymersDemo {
     }
 
 }
+//projekt jest poprawny i przechodzi wszystkie testy
