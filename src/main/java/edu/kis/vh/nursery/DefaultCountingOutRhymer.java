@@ -52,6 +52,7 @@ public class DefaultCountingOutRhymer {
     public void countIn(int in) {
         if (!isFull())
             numbers[++total] = in;
+            // TODO: brak obsługi przypadku przepełnienia – metoda ignoruje błąd zamiast np. rzucić wyjątek
     }
     /**
      * Sprawdza, czy stos jest pusty.
@@ -60,6 +61,7 @@ public class DefaultCountingOutRhymer {
      */
     protected boolean callCheck() {
         return total == STACK_EMPTY;
+        // TODO: nazwa metody nieczytelna – lepsza byłaby np. isEmpty()
     }
     /**
      * Sprawdza, czy stos jest pełny.
@@ -78,6 +80,7 @@ public class DefaultCountingOutRhymer {
         if (callCheck())
             return STACK_EMPTY;
         return numbers[total];
+        // TODO: zwracanie wartości specjalnej zamiast wyjątku może ukrywać błędy i nazwa jest nie nieczytelna
     }
     /**
      * Usuwa i zwraca element ze szczytu stosu.
@@ -88,6 +91,7 @@ public class DefaultCountingOutRhymer {
         if (callCheck())
             return STACK_EMPTY;
         return numbers[total--];
+        // TODO: brak wyjątku przy pustym stosie – może prowadzić do trudnych do wykrycia błędów
     }
 
 }

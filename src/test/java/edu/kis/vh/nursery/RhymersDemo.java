@@ -9,7 +9,6 @@ class RhymersDemo {
 
     public static void main(String[] args) {
         Rhymersfactory factory = new DefaultRhymersFactory();
-
         testRhymers(factory);
 
     }
@@ -35,6 +34,7 @@ class RhymersDemo {
         System.out.println("total rejected is "
                 + ((HanoiRhymer) rhymers[3]).reportRejected());
     }
+    // TODO: Pozbyć się magic numbers 3,20,15
 
 }
 //projekt jest poprawny i przechodzi wszystkie testy
